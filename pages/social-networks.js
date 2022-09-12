@@ -13,7 +13,7 @@ export default function SocialNetworks() {
     <Layout mainStyle="h-screen bg-stone-900 text-center flex flex-col lg:justify-center items-center gap-9">
       <h1 className="font-bold text-blue-500 text-7xl">Social Networks</h1>
 
-      <section className="flex gap-9">
+      <section className="grid grid-cols-2 lg:flex gap-9">
         <SocialIconLinkButton
           link="https://wa.me/+51984412733"
           networkName="whatsapp"
