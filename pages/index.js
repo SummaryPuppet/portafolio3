@@ -3,7 +3,7 @@ import HomeButtonLink from "../components/HomeButtonLink";
 
 export default function Home() {
   return (
-    <Layout mainStyle="grid lg:grid-cols-2 gap-9 lg:gap-32 place-content-center bg-black">
+    <Layout mainStyle="h-screen grid lg:grid-cols-2 gap-9 lg:gap-32 place-content-center bg-black">
       <section>
         <article className="font-bold text-7xl lg:text-9xl text-neutral-200">
           <h1>Hello,</h1>

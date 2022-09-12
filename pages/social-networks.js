@@ -10,7 +10,7 @@ export default function SocialNetworks() {
   };
 
   return (
-    <Layout mainStyle="bg-stone-900 text-center flex flex-col lg:justify-center items-center gap-9">
+    <Layout mainStyle="h-screen bg-stone-900 text-center flex flex-col lg:justify-center items-center gap-9">
       <h1 className="font-bold text-blue-500 text-7xl">Social Networks</h1>
 
       <section className="flex gap-9">

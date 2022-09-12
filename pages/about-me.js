@@ -4,7 +4,7 @@ import ReturnBackButton from "../components/ReturnBackButton";
 
 export default function About(){
   return (
-    <Layout mainStyle="bg-stone-900 text-neutral-200 text-center flex flex-col gap-4">
+    <Layout mainStyle="h-screen bg-stone-900 text-neutral-200 text-center flex flex-col gap-4">
       <h1 className="text-5xl font-bold text-red-500 lg:text-6xl">About me</h1>
 
       <section className="text-lg">

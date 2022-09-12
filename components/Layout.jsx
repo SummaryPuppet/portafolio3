@@ -13,7 +13,7 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={`h-screen p-2 ${mainStyle}`}>{children}</main>
+      <main className={`p-2 ${mainStyle}`}>{children}</main>
     </>
   );
 }
