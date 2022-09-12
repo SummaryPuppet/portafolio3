@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import SocialIconLinkButton from "../components/SocialIconLinkButton";
-import { BsWhatsapp, BsGithub, BsFacebook } from "react-icons/bs";
+import { BsWhatsapp, BsGithub, BsFacebook, BsInstagram } from "react-icons/bs";
 import ReturnBackButton from "../components/ReturnBackButton";
 
 export default function SocialNetworks() {
@@ -33,6 +33,13 @@ export default function SocialNetworks() {
           networkName="facebook"
         >
           <BsFacebook {...iconsStyle} />
+        </SocialIconLinkButton>
+        
+        <SocialIconLinkButton
+          link="https://www.instagram.com/adriansalcedovargas/"
+          networkName="instagram"
+        >
+          <BsInstagram {...iconsStyle} />
         </SocialIconLinkButton>
       </section>
 
