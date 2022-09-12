@@ -29,7 +29,7 @@ export default function SocialNetworks() {
         </SocialIconLinkButton>
 
         <SocialIconLinkButton
-          link="https://wa.me/+51984412733"
+          link="https://www.facebook.com/adrian.salcedovargas.3/"
           networkName="facebook"
         >
           <BsFacebook {...iconsStyle} />

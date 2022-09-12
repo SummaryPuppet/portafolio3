@@ -4,7 +4,7 @@ import ReturnBackButton from "../components/ReturnBackButton";
 
 export default function Projects({ repos }) {
   return (
-    <Layout mainStyle="bg-stone-900 flex flex-col gap-5 h-full">
+    <Layout mainStyle="h-full bg-stone-900 flex flex-col gap-5">
       <h1 className="font-bold text-center text-green-500 text-7xl">Projects</h1>
 
       <section className="grid gap-4">
