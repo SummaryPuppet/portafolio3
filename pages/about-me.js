@@ -1,6 +1,8 @@
 import Layout from "../components/Layout";
 import ReturnBackButton from "../components/ReturnBackButton";
 
+import { DiReact, DiNodejs, DiMongodb, DiLinux} from "react-icons/di"
+
 export default function About() {
   const subTitleStyle = "text-xl font-semibold"
 
@@ -33,6 +35,17 @@ export default function About() {
 
           <p>I&#8217;m studing Software enginer</p>
           <p>in Universidad Tecnologica del Peru</p>
+        </article>
+
+        <article>
+          <h2 className={subTitleStyle}>I learn this technologies</h2>
+          
+          <section className="flex flex-col items-center gap-2">
+            <a><DiReact size="4em" /></a>
+            <a><DiNodejs size="4em"/></a>
+            <a><DiMongodb size="4em" /></a>
+            <a><DiLinux size="4em" /></a>
+          </section>
         </article>
       </section>
 
