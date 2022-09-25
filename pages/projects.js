@@ -7,7 +7,7 @@ export default function Projects({ repos }) {
     <Layout mainStyle="h-full bg-stone-900 flex flex-col gap-5">
       <h1 className="font-bold text-center text-green-500 text-7xl">Projects</h1>
 
-      <section className="grid gap-4">
+      <section className="grid gap-7 lg:gap-4">
         {repos.map((repo, index) => (
           <ProjectItem key={index} {...repo} />
         ))}
@@ -22,14 +22,26 @@ export async function getServerSideProps() {
   const URL = "https://api.github.com/users/SummaryPuppet/repos";
   const TOKEN = "token " + process.env.GITHUB_TOKEN
 
+  const repos = [];
+  
+
   const res = await fetch(URL, {
     headers: {
       Authorization: TOKEN,
     },
   });
 
+  if (res.status == 401) {
+    repos.push({name: "Error github token is not defined"})
+
+    return {
+      props: {
+        repos
+      }
+    }
+  }
+
   const data = await res.json();
-  const repos = [];
 
   data.map((repo) => {
     const {
