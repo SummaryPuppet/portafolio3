@@ -5,6 +5,7 @@ export default function useProject(repos = []) {
   const [findRepos, setFindRepos] = useState(repos);
   const [hStyle, setHStyle] = useState("h-full");
   const [sortOption, setSortOption] = useState("");
+  const [languages, setLenguages] = useState([])
 
   const searchChange = (searchText = "") => {
     setSearch(searchText);
@@ -41,7 +42,6 @@ export default function useProject(repos = []) {
     setSortOption(sortO);
 
     const sort = sorts[sortO];
-    console.log(sort)
     sort();
   };
 
@@ -53,8 +53,7 @@ export default function useProject(repos = []) {
     if (findRepos.length < 7) {
       setHStyle("h-screen");
     }
-    console.log(findRepos)
-  });
+  }, [search]);
 
   return {
     search,

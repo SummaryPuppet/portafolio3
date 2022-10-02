@@ -7,13 +7,13 @@ export default function ProjectSearchBar({
   return (
     <header className="flex justify-center gap-3">
       <input
-        className="p-1 bg-transparent border-2 border-green-500 dark:text-neutral-200 rounded"
+        className="p-1 bg-transparent border-2 border-green-800 focus:outline-none text-neutral-200 rounded"
         value={inputValue}
         onChange={(e) => inputChange(e.target.value)}
       />
 
       <select
-        className="bg-stone-600"
+        className="bg-stone-600 focus:outline-none"
         value={selectValue}
         onChange={(e) =>selectChange(e.target.value)}
       >
