@@ -22,18 +22,26 @@ export default function useProject(repos = []) {
 
     return 0;
   };
+ 
+  const sortDates = (date1, date2) => {
+    date1 = new Date(date1.created_at)
+    date2 = new Date(date2.created_at)
+
+    return date1 - date2
+  }
 
   const sorts = {
-    "z-a": () => findRepos.sort(sortNames),
-    "a-z": () => findRepos.sort(sortNames).reverse(),
-    last: () => findRepos.sort((x, y) => x - y),
-    first: () => findRepos.sort((x, y) => y - x),
+    "a-z": () => setFindRepos(findRepos.sort(sortNames)),
+    "z-a": () => setFindRepos(findRepos.sort(sortNames).reverse()),
+    last: () => setFindRepos(findRepos.sort(sortDates).reverse()),
+    first: () => setFindRepos(findRepos.sort(sortDates)),
   };
 
   const sortChange = (sortO) => {
     setSortOption(sortO);
 
     const sort = sorts[sortO];
+    console.log(sort)
     sort();
   };
 
@@ -45,6 +53,7 @@ export default function useProject(repos = []) {
     if (findRepos.length < 7) {
       setHStyle("h-screen");
     }
+    console.log(findRepos)
   });
 
   return {
