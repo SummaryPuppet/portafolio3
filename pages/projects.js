@@ -6,8 +6,15 @@ import ProjectSearchBar from "../components/ProjectSearchBar";
 import useProject from "../hooks/useProject";
 
 export default function Projects({ repos = [] }) {
-  const { search, hStyle, searchChange, findRepos, sortOption, sortChange } =
-    useProject(repos);
+  const {
+    search,
+    hStyle,
+    searchChange,
+    findRepos,
+    sortOption,
+    sortChange,
+    languages,
+  } = useProject(repos);
 
   return (
     <Layout mainStyle={`${hStyle} bg-stone-900 flex flex-col gap-5`}>
@@ -20,6 +27,7 @@ export default function Projects({ repos = [] }) {
         inputChange={searchChange}
         selectValue={sortOption}
         selectChange={sortChange}
+        languages={languages}
       />
 
       <section className="grid gap-7 lg:gap-4">
