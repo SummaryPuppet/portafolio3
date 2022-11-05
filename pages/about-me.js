@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 import ReturnBackButton from "../components/ReturnBackButton";
 
 import { SiExpress, SiPython, SiNextdotjs } from "react-icons/si";
-import { DiReact, DiNodejs, DiMongodb, DiLinux } from "react-icons/di";
+import { DiReact, DiNodejs, DiMongodb, DiLinux, DiRust } from "react-icons/di";
 
 export default function About() {
   const subTitleStyle = "text-xl font-semibold";
@@ -44,6 +44,11 @@ export default function About() {
     {
       name: "Linux",
       icon: <DiLinux {...tecIconConfig} />,
+      link: "https://www.linux.org/",
+    },
+    {
+      name: "Rust",
+      icon: <DiRust {...tecIconConfig} />,
       link: "https://www.linux.org/",
     },
   ];
